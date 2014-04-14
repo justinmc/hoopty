@@ -16,7 +16,7 @@ define(['scene'], function (Scene) {
 
         function Engine(canvas, changeScenesCallback) {
             // Save the changeScenes callback if given
-            if (changeScenesCallback !== null) {
+            if (typeof changeScenesCallback !== 'undefined' && changeScenesCallback !== null) {
                 this.changeScenesCallback = changeScenesCallback;
             }
 
