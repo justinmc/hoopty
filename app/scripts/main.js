@@ -8,6 +8,7 @@ require.config({
         tween: 'components/tween',
         draggable: 'components/draggable',
         dragCreate: 'components/dragCreate',
+        keyMove: 'components/keyMove',
         bounded: 'components/bounded',
         collision: 'components/collision',
     },
@@ -16,13 +17,13 @@ require.config({
 require([
     'engine',
     'entity', 'sprite', 'text', 'textMultiline', 'button',
-    'component', 'tween', 'draggable', 'dragCreate', 'bounded', 'collision',
+    'component', 'tween', 'draggable', 'dragCreate', 'keyMove', 'bounded', 'collision',
     'scene', 'loading'
 ],
 function (
     Engine,
     Entity, Sprite, Text, TextMultiline, Button,
-    Component, Tween, Draggable, DragCreate, Bounded, Collision,
+    Component, Tween, Draggable, DragCreate, KeyMove, Bounded, Collision,
     Scene, Loading
 ) {
     'use strict';
@@ -39,11 +40,12 @@ function (
         },
         components: {
             Component: Component,
-            Tween: Tween,
-            Draggable: Draggable,
-            DragCreate: DragCreate,
             Bounded: Bounded,
             Collision: Collision,
+            Draggable: Draggable,
+            DragCreate: DragCreate,
+            KeyMove: KeyMove,
+            Tween: Tween,
         },
         scenes: {
             Scene: Scene,

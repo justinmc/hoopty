@@ -53,6 +53,9 @@ define(['scene'], function (Scene) {
             document.addEventListener('keyup', function(event) {
                 me.getSceneActive().eventFire(event);
             });
+            document.addEventListener('keydown', function(event) {
+                me.getSceneActive().eventFire(event);
+            });
         }
 
         // Call at each frame
