@@ -3,7 +3,6 @@ define(['entity'], function (Entity) {
     'use strict';
 
     return (function() {
-        // Inherit from the Extendable class
         Entity.extend(Sprite);
 
         Sprite.prototype.obj = null;
@@ -25,14 +24,35 @@ define(['entity'], function (Entity) {
         function Sprite(x, y, width, height, spriteSheet, spriteX, spriteY, spriteWidth, spriteHeight) {
             Sprite.__super__.constructor.call(this, x, y, width, height);
 
-            // Set passed in args
             this.spriteSheet = spriteSheet;
-            this.spriteX = spriteX;
-            this.spriteY = spriteY;
-            this.spriteHeight = spriteHeight;
-            this.spriteWidth = spriteWidth;
-            this.spriteXDefault = spriteX;
-            this.spriteYDefault = spriteY;
+
+            if (typeof spriteX === 'undefined' || spriteX === null) {
+                this.spriteX = 0;
+            }
+            else {
+                this.spriteX = spriteX;
+            }
+            if (typeof spriteY === 'undefined' || spriteY === null) {
+                this.spriteY = 0;
+            }
+            else {
+                this.spriteY = spriteY;
+            }
+            if (typeof spriteWidth === 'undefined' || spriteWidth === null) {
+                this.spriteWidth = width;
+            }
+            else {
+                this.spriteWidth = spriteWidth;
+            }
+            if (typeof spriteHeight === 'undefined' || spriteHeight === null) {
+                this.spriteHeight = height;
+            }
+            else {
+                this.spriteHeight = spriteHeight;
+            }
+
+            this.spriteXDefault = this.spriteX;
+            this.spriteYDefault = this.spriteY;
 
             // Create the object
             this.obj = new Image();

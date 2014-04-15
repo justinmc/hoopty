@@ -2,6 +2,7 @@ require.config({
     paths: {
         loading: 'scenes/loading',
         sprite: 'entities/sprite',
+        spriteGrid: 'entities/spriteGrid',
         text: 'entities/text',
         textMultiline: 'entities/textMultiline',
         button: 'entities/button',
@@ -16,13 +17,13 @@ require.config({
 
 require([
     'engine',
-    'entity', 'sprite', 'text', 'textMultiline', 'button',
+    'entity', 'sprite', 'spriteGrid', 'text', 'textMultiline', 'button',
     'component', 'tween', 'draggable', 'dragCreate', 'keyMove', 'bounded', 'collision',
     'scene', 'loading'
 ],
 function (
     Engine,
-    Entity, Sprite, Text, TextMultiline, Button,
+    Entity, Sprite, SpriteGrid, Text, TextMultiline, Button,
     Component, Tween, Draggable, DragCreate, KeyMove, Bounded, Collision,
     Scene, Loading
 ) {
@@ -34,6 +35,7 @@ function (
         entities: {
             Entity: Entity,
             Sprite: Sprite,
+            SpriteGrid: SpriteGrid,
             Text: Text,
             TextMultiline: TextMultiline,
             Button: Button,
