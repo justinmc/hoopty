@@ -94,7 +94,7 @@ define(['extendable'], function (Extendable) {
                 var eventX = 0;
                 var eventY = 0;
                 if (event.type === 'touchstart' || event.type === 'touchmove' || event.type === 'touchend' || event.type === 'touchcancel') {
-                    var eventOriginal = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+                    var eventOriginal = event.touches[0] || event.changedTouches[0];
                     eventX = eventOriginal.pageX;
                     eventY = eventOriginal.pageY;
                 }
