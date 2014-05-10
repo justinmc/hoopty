@@ -29,6 +29,18 @@ Common parameters are:
  - width - The width of the rendered entity
  - height - The height of the rendered entity
 
+### Text
+Creates a text object
+
+#### Constructor
+
+    Text(x, y, width, text, font, fillStyle, textAlign)
+
+ - text - The actual text string to display
+ - font - The font to apply to the text
+ - fillStyle - The fillStyle to apply to the text
+ - textAlign - The textAlign property to apply to the text
+
 ### Sprite
 
 #### Constructor
