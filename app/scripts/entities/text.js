@@ -12,8 +12,9 @@ define(['entity'], function (Entity) {
         Text.prototype.text = '';
         Text.prototype.font = null;
         Text.prototype.fillStyle = 'rgb(0, 0, 0)';
+        Text.prototype.textAlign = 'left';
 
-        function Text(x, y, width, text, font, fillStyle) {
+        function Text(x, y, width, text, font, fillStyle, textAlign) {
             if (typeof text !== 'undefined') {
                 this.text = text;
             }
@@ -23,6 +24,9 @@ define(['entity'], function (Entity) {
             if (typeof fillStyle !== 'undefined') {
                 this.fillStyle = fillStyle;
             }
+            if (typeof textAlign !== 'undefined') {
+                this.textAlign = textAlign;
+            }
             Text.__super__.constructor.call(this, x, y, width, 0);
         }
 
@@ -30,6 +34,7 @@ define(['entity'], function (Entity) {
             if (this.font !== null) {
                 ctx.font = this.font;
             }
+            ctx.textAlign = this.textAlign;
             ctx.fillStyle = this.fillStyle;
 
             ctx.fillText(this.text, this.x, this.y, this.width);
