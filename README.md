@@ -22,7 +22,45 @@ Support for using Hoopty as an AMD module is planned but not yet available.
 
 ## Entities
 
+Common parameters are:
+
+ - x - The x coordinate to render at
+ - y - The y coordinate to render at
+ - width - The width of the rendered entity
+ - height - The height of the rendered entity
+
 ### Sprite
+
+#### Constructor
+
+    Sprite(x, y, width, height, spriteSheet, spriteX, spriteY, spriteWidth, spriteHeight)
+
+ - spriteSheet - A string containing a url to the image representing the sprite sheet for this sprite
+ - spriteX - The x coordinate of the top left corner of the sprite in the sprite sheet
+ - spriteY - The y coordinate of the top left corner of the sprite in the sprite sheet
+ - spriteWidth - The width of the sprite in the sprite sheet
+ - spriteHeight - The height of the sprite in the sprite sheet
+
+#### Methods
+
+##### `Sprite.prototype.spriteAnimationAdd(name, fromX, fromY, toX, period)`
+Define a new sprite animation with the given names and frames in the sprite sheet
+
+ - name - The name to refer to this animation
+ - fromX - The x position in the sprite sheet of the starting frame
+ - fromY - The y position in the sprite sheet of the starting frame
+ - toX - The x position in the sprite sheet of the final frame
+ - period - The time between displaying each frame
+
+##### `Sprite.prototype.spriteAnimate(name, repetitions, callback)`
+Run an animation added with `Sprite.prototype.spriteAnimationAdd`
+
+ - name - The name of the animation added by `Sprite.prototype.spriteAnimationAdd`
+ - repetitions - How many times to run the animation.  -1 runs indefinitely
+ - callback - A function to call after finishing the last repetition
+
+##### `Sprite.prototype.spriteAnimateStop()`
+Stop the running animation
 
 ### Text
 
