@@ -36,12 +36,15 @@ define(['scene', 'text'], function (Scene, Text) {
             ctx.strokeStyle = this.strokeStyle;
             ctx.strokeRect(this.x, this.y, this.width, this.height);
 
+            // Get the height of the font
+            var fontSize = parseInt(this.font.substr(0, this.font.indexOf('px')));
+
             // Draw the text
             if (this.font !== null) {
                 ctx.font = this.font;
             }
             ctx.fillStyle = this.fillStyle;
-            ctx.fillText(this.text, this.x + this.padding, this.y + 2 * this.height / 3, this.width - this.padding * 2);
+            ctx.fillText(this.text, this.x + this.padding, this.y + fontSize + this.padding, this.width - this.padding * 2);
         };
 
         // Button click event, has to check if click was inside the button!
