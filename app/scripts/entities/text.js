@@ -27,7 +27,7 @@ define(['entity'], function (Entity) {
             if (typeof textAlign !== 'undefined') {
                 this.textAlign = textAlign;
             }
-            Text.__super__.constructor.call(this, x, y, width, 0);
+            Text.__super__.constructor.call(this, x, y, width, this.height || 0);
         }
 
         Text.prototype.render = function(ctx, dt) {

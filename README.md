@@ -41,6 +41,19 @@ Creates a text object
  - fillStyle - The fillStyle to apply to the text
  - textAlign - The textAlign property to apply to the text
 
+### TextInput
+
+#### Constructor
+    TextInput(x, y, width, height, text, font, fillStyle, textAlign, strokeStyle, padding, fillStyleInput, type)
+
+ - text - The initial value to place in the input
+ - font - The font to apply to the text
+ - fillStyle - The fillStyle to apply to the text
+ - textAlign - The textAlign property to apply to the text
+ - strokeStyle - The strokeStyle to apply to the rectangle
+ - padding - The padding between the text and the input
+ - fillStyleInput - The fillStyle to apply to the input box
+
 ### Sprite
 
 #### Constructor
