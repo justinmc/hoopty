@@ -16,6 +16,9 @@ define(['text'], function (Text) {
         TextMultiline.prototype.textArray = [];
 
         function TextMultiline(x, y, width, text, font, fillStyle, charsPerLine, lineHeight) {
+            // Reset textArray for a deep copy
+            this.textArray = [];
+
             TextMultiline.__super__.constructor.call(this, x, y, width, text, font, fillStyle);
 
             if (typeof charsPerLine !== 'undefined') {
