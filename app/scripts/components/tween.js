@@ -12,6 +12,7 @@ define(['component'], function (Component) {
 
         // The name to refer to this component
         Tween.prototype.name = 'Tween';
+        Tween.title = 'Tween';
 
         // Parameters
         Tween.prototype.x = null;

@@ -12,6 +12,7 @@ define(['scene', 'component'], function (Scene, Component) {
 
         // The name to refer to this component
         Collision.prototype.name = 'Collision';
+        Collision.title = 'Collision';
 
         // The function to call if a collision was detected
         Collision.prototype.callback = null;

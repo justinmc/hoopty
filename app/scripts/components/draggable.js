@@ -12,6 +12,7 @@ define(['scene', 'component'], function (Scene, Component) {
 
         // The name to refer to this component
         Draggable.prototype.name = 'Draggable';
+        Draggable.title = 'Draggable';
 
         Draggable.prototype.draggingX = null;
         Draggable.prototype.draggingY = null;

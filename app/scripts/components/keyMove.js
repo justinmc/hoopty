@@ -12,6 +12,7 @@ define(['scene', 'component'], function (Scene, Component) {
 
         // The name to refer to this component
         Obj.prototype.name = 'KeyMove';
+        Obj.title = 'KeyMove';
 
         // Default
         Obj.prototype.speed = 100; // pixels / second

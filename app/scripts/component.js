@@ -11,6 +11,7 @@ define(['extendable'], function (Extendable) {
 
         // The name to refer to this component
         Component.prototype.name = 'Component';
+        Component.title = 'Component';
 
         function Component(entity) {
             this.entity = entity;

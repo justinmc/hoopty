@@ -13,6 +13,7 @@ define(['scene', 'component'], function (Scene, Component) {
 
         // The name to refer to this component
         DragCreate.prototype.name = 'DragCreate';
+        DragCreate.title = 'DragCreate';
 
         // An entity to be created on drag, bound to its arguments
         // So could be passed as this for example: Entity.bind(this, 0, 0)

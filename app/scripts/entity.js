@@ -43,8 +43,8 @@ define(['extendable'], function (Extendable) {
         };
 
         // Remove a component
-        Entity.prototype.componentRemove = function(component) {
-            delete this.components[component.name];
+        Entity.prototype.componentRemove = function(Component) {
+            delete this.components[Component.title];
         };
 
         return Entity;

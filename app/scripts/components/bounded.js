@@ -12,6 +12,7 @@ define(['component'], function (Component) {
 
         // The name to refer to this component
         Bounded.prototype.name = 'Bounded';
+        Bounded.title = 'Bounded';
 
         // The location to be bounded within
         Bounded.prototype.x = null;
