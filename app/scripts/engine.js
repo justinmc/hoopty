@@ -42,14 +42,12 @@ define(['scene'], function (Scene) {
                 me.getSceneActive().eventFire(event);
             });
             this.canvas.addEventListener('touchstart', function(event) {
-                console.log('touchstart');
                 me.getSceneActive().eventFire(event);
             });
             this.canvas.addEventListener('touchmove', function(event) {
                 me.getSceneActive().eventFire(event);
             });
             this.canvas.addEventListener('touchend', function(event) {
-                console.log('touchend');
                 me.getSceneActive().eventFire(event);
             });
             document.addEventListener('keyup', function(event) {
