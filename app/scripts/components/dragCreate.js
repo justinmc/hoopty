@@ -33,8 +33,10 @@ define(['scene', 'component'], function (Scene, Component) {
         }
 
         DragCreate.prototype.touchstart = function(event, scene) {
-            // Call event.preventDefault to prevent touchcancel
-            event.preventDefault();
+            // Call event.preventDefault to prevent touchcancel if necessary
+            if (Scene.isInside(scene.getEventCoords(event), this.entity) && this.entity.display && !scene.dragging) {
+                event.preventDefault();
+            }
 
             this.drag(event, scene);
         };

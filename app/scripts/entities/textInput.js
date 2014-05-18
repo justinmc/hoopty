@@ -49,7 +49,10 @@ define(['text', 'scene'], function (Text, Scene) {
             // Create the hidden input
             this.input = document.createElement('input');
             this.input.type = this.type;
-            this.input.style.opacity = 0;
+            this.input.style.opacity = 1;
+            this.input.style.position = 'absolute';
+            this.input.style.top = '-10000px';
+            this.input.style['z-index'] = -1;
             document.body.appendChild(this.input);
 
             // Create an event to pull text from hidden input

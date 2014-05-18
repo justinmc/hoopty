@@ -26,8 +26,10 @@ define(['scene', 'component'], function (Scene, Component) {
         };
 
         Draggable.prototype.touchstart = function(event, scene) {
-            // Call event.preventDefault to prevent touchcancel
-            event.preventDefault();
+            // Call event.preventDefault to prevent touchcancel if necessary
+            if (Scene.isInside(scene.getEventCoords(event), this.entity) && this.isDragging()) {
+                event.preventDefault();
+            }
 
             this.dragStart(event, scene);
         };
@@ -63,7 +65,7 @@ define(['scene', 'component'], function (Scene, Component) {
 
         Draggable.prototype.dragMove = function(event, scene) {
             // Drag if needed
-            if ((this.draggingX !== null) && (this.draggingY !== null)) {
+            if (this.isDragging()) {
                 var coords = scene.getEventCoords(event);
                 this.entity.x = coords.x - this.draggingX;
                 this.entity.y = coords.y - this.draggingY;
@@ -72,13 +74,23 @@ define(['scene', 'component'], function (Scene, Component) {
 
         Draggable.prototype.dragEnd = function(event, scene) {
             // Release a drag if needed
-            if ((this.draggingX !== null) && (this.draggingY !== null)) {
+            if (this.isDragging()) {
                 scene.dragging = false;
                 var coords = scene.getEventCoords(event);
                 this.entity.x = coords.x - this.draggingX;
                 this.entity.y = coords.y - this.draggingY;
                 this.draggingX = null;
                 this.draggingY = null;
+            }
+        };
+
+        // Returns true if currently being dragged, false otherwise
+        Draggable.prototype.isDragging = function() {
+            if ((this.draggingX !== null) && (this.draggingY !== null)) {
+                return true;
+            }
+            else {
+                return false;
             }
         };
 
