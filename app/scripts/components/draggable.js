@@ -26,6 +26,9 @@ define(['scene', 'component'], function (Scene, Component) {
         };
 
         Draggable.prototype.touchstart = function(event, scene) {
+            // Call event.preventDefault to prevent touchcancel
+            event.preventDefault();
+
             this.dragStart(event, scene);
         };
 
