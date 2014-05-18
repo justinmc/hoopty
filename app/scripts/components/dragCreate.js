@@ -33,6 +33,9 @@ define(['scene', 'component'], function (Scene, Component) {
         }
 
         DragCreate.prototype.touchstart = function(event, scene) {
+            // Call event.preventDefault to prevent touchcancel
+            event.preventDefault();
+
             this.drag(event, scene);
         };
 
