@@ -1,7 +1,6 @@
 ![Hoopty Logo](http://184.106.225.148/public/hoopty_logo.gif)
 
-# Hoopty 
-## A bare bones Javascript game framework
+# Hoopty - A bare bones Javascript game framework
 
 Hoopty is a lightweight game framework with no dependencies.  It provides a solid entity component system while leaving rendering fully up to you.  This gives you a solid base to build your game off of without having to depend on any codebase too hard or worry about code that's not optimized for your style of game.
 
