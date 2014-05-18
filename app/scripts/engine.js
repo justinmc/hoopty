@@ -39,7 +39,6 @@ define(['scene'], function (Scene) {
                 me.getSceneActive().eventFire(event);
             });
             this.canvas.addEventListener('click', function(event) {
-                console.log('click');
                 me.getSceneActive().eventFire(event);
             });
             this.canvas.addEventListener('touchstart', function(event) {
