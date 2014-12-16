@@ -2,11 +2,13 @@
     Component: Collision
     Calls a callback when colliding with another entity
 */
-/*global define */
-define(['scene', 'component'], function (Scene, Component) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Scene = require('../scene');
+    var Component = require('../component');
+
+    module.exports = (function() {
         // Inherit from the Component class
         Component.extend(Collision);
 
@@ -82,5 +84,4 @@ define(['scene', 'component'], function (Scene, Component) {
         return Collision;
 
     })();
-});
-
+})();

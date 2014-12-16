@@ -2,11 +2,12 @@
     Component: Bounded
     Prevents moving outside the canvas
 */
-/*global define */
-define(['component'], function (Component) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Component = require('../component');
+
+    module.exports = (function() {
         // Inherit from the Component class
         Component.extend(Bounded);
 
@@ -76,5 +77,4 @@ define(['component'], function (Component) {
         return Bounded;
 
     })();
-});
-
+})();

@@ -1,8 +1,9 @@
-/*global define, alert */
-define(['scene'], function (Scene) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Scene = require('./scene');
+
+    module.exports = (function() {
 
         // DOM Objects
         Engine.prototype.canvas = null;
@@ -119,4 +120,4 @@ define(['scene'], function (Scene) {
 
         return Engine;
     })();
-});
+})();

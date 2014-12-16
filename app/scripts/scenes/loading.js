@@ -2,11 +2,13 @@
     Scene: Loading
     The initial loading screen
 */
-/*global define */
-define(['scene', 'text'], function (Scene, Text) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Scene = require('../scene');
+    var Text = require('../entities/text');
+
+    module.exports = (function() {
         Scene.extend(Loading);
 
         Loading.prototype.name = 'Loading';
@@ -60,4 +62,4 @@ define(['scene', 'text'], function (Scene, Text) {
         return Loading;
 
     })();
-});
+})();

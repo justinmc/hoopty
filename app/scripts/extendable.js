@@ -1,8 +1,7 @@
-/*global define */
-define([], function () {
+(function () {
     'use strict';
 
-    return (function() {
+    module.exports = (function() {
 
         function Extendable() {
         }
@@ -27,5 +26,4 @@ define([], function () {
         return Extendable;
 
     })();
-});
-
+})();

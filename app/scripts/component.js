@@ -1,8 +1,9 @@
-/*global define */
-define(['extendable'], function (Extendable) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Extendable = require('./extendable');
+
+    module.exports = (function() {
         // Inherit from the Extendable class
         Extendable.extend(Component);
 
@@ -23,5 +24,4 @@ define(['extendable'], function (Extendable) {
         return Component;
 
     })();
-});
-
+})();

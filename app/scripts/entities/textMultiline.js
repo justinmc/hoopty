@@ -2,11 +2,12 @@
     Entity: TextMultiline
     Creates a text object
 */
-/*global define */
-define(['text'], function (Text) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Text = require('./text');
+
+    module.exports = (function() {
         Text.extend(TextMultiline);
 
         TextMultiline.prototype.charsPerLine = 80;
@@ -54,4 +55,4 @@ define(['text'], function (Text) {
         return TextMultiline;
 
     })();
-});
+})();

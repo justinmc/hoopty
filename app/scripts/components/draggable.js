@@ -2,11 +2,13 @@
     Component: Draggable
     Makes the entity draggable with the mouse
 */
-/*global define, alert */
-define(['scene', 'component'], function (Scene, Component) {
+(function () {
     'use strict';
+ 
+    var Scene = require('../scene');
+    var Component = require('../component');
 
-    return (function() {
+    module.exports = (function() {
         // Inherit from the Component class
         Component.extend(Draggable);
 
@@ -97,5 +99,4 @@ define(['scene', 'component'], function (Scene, Component) {
         return Draggable;
 
     })();
-});
-
+})();

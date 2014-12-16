@@ -1,37 +1,28 @@
-require.config({
-    paths: {
-        loading: 'scenes/loading',
-        sprite: 'entities/sprite',
-        text: 'entities/text',
-        textMultiline: 'entities/textMultiline',
-        textInput: 'entities/textInput',
-        button: 'entities/button',
-        tween: 'components/tween',
-        draggable: 'components/draggable',
-        dragCreate: 'components/dragCreate',
-        keyMove: 'components/keyMove',
-        bounded: 'components/bounded',
-        collision: 'components/collision',
-    },
-});
-
-require([
-    'engine',
-    'entity', 'sprite', 'text', 'textMultiline', 'textInput', 'button',
-    'component', 'tween', 'draggable', 'dragCreate', 'keyMove', 'bounded', 'collision',
-    'scene', 'loading'
-],
-function (
-    Engine,
-    Entity, Sprite, Text, TextMultiline, TextInput, Button,
-    Component, Tween, Draggable, DragCreate, KeyMove, Bounded, Collision,
-    Scene, Loading
-) {
+(function() {
     'use strict';
+
+    var Engine = require('./engine');
+    var Entity = require('./entity');
+    var Extendable = require('./extendable');
+    var Component = require('./component');
+    var Scene = require('./scene');
+    var Loading = require('./scenes/loading');
+    var Sprite = require('./entities/sprite');
+    var Text = require('./entities/text');
+    var TextMultiline = require('./entities/textMultiline');
+    var TextInput = require('./entities/textInput');
+    var Button = require('./entities/button');
+    var Tween = require('./components/tween');
+    var Draggable = require('./components/draggable');
+    var DragCreate = require('./components/dragCreate');
+    var KeyMove = require('./components/keyMove');
+    var Bounded = require('./components/bounded');
+    var Collision = require('./components/collision');
 
     // Create the global hoopty object
     window.hoopty = {
         Engine: Engine,
+        Extendable: Extendable,
         entities: {
             Entity: Entity,
             Sprite: Sprite,
@@ -54,5 +45,4 @@ function (
             Loading: Loading,
         }
     };
-});
-
+})();

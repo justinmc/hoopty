@@ -3,11 +3,13 @@
     On drag, creates a new draggable entity and drags it
     Ala getting something from a toolbar
 */
-/*global define, alert */
-define(['scene', 'component'], function (Scene, Component) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Scene = require('../scene');
+    var Component = require('../component');
+
+    module.exports = (function() {
         // Inherit from the Component class
         Component.extend(DragCreate);
 
@@ -70,5 +72,4 @@ define(['scene', 'component'], function (Scene, Component) {
         return DragCreate;
 
     })();
-});
-
+})();

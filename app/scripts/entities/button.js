@@ -2,11 +2,13 @@
     Entity: Text: Button
     Creates a text object with an outline around it
 */
-/*global define */
-define(['scene', 'text'], function (Scene, Text) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Scene = require('../scene');
+    var Text = require('../entities/text');
+
+    module.exports = (function() {
         Text.extend(Button);
 
         Button.prototype.callback = null;
@@ -57,4 +59,4 @@ define(['scene', 'text'], function (Scene, Text) {
         return Button;
 
     })();
-});
+})();

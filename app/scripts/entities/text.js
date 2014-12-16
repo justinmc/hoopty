@@ -2,11 +2,12 @@
     Entity: Text
     Creates a text object
 */
-/*global define */
-define(['entity'], function (Entity) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Entity = require('../entity');
+
+    module.exports = (function() {
         Entity.extend(Text);
 
         Text.prototype.text = '';
@@ -43,4 +44,4 @@ define(['entity'], function (Entity) {
         return Text;
 
     })();
-});
+})();

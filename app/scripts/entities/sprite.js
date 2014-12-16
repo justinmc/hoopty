@@ -1,8 +1,9 @@
-/*global define */
-define(['entity'], function (Entity) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Entity = require('../entity');
+
+    module.exports = (function() {
         Entity.extend(Sprite);
 
         Sprite.prototype.obj = null;
@@ -159,4 +160,4 @@ define(['entity'], function (Entity) {
         return Sprite;
 
     })();
-});
+})();

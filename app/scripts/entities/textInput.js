@@ -2,11 +2,13 @@
     Entity: Text: TextInput
     Mimics an <input> in DOM
 */
-/*global define */
-define(['text', 'scene'], function (Text, Scene) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Text = require('./text');
+    var Scene = require('../scene');
+
+    module.exports = (function() {
         Text.extend(TextInput);
 
         TextInput.prototype.height = 0;
@@ -103,4 +105,4 @@ define(['text', 'scene'], function (Text, Scene) {
         return TextInput;
 
     })();
-});
+})();

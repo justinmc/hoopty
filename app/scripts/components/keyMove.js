@@ -2,11 +2,13 @@
     Component: keyMove
     Makes the entity movable with the keyboard, ala the player character
 */
-/*global define, alert */
-define(['scene', 'component'], function (Scene, Component) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Scene = require('../scene');
+    var Component = require('../component');
+
+    module.exports = (function() {
         // Inherit from the Component class
         Component.extend(Obj);
 
@@ -76,5 +78,4 @@ define(['scene', 'component'], function (Scene, Component) {
         return Obj;
 
     })();
-});
-
+})();

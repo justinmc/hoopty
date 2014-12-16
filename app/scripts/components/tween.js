@@ -2,11 +2,12 @@
     Component: Tween
     Allows moving animations
 */
-/*global define */
-define(['component'], function (Component) {
+(function () {
     'use strict';
 
-    return (function() {
+    var Component = require('../component');
+
+    module.exports = (function() {
         // Inherit from the Component class
         Component.extend(Tween);
 
@@ -82,5 +83,4 @@ define(['component'], function (Component) {
         return Tween;
 
     })();
-});
-
+})();
